@@ -10,7 +10,7 @@
 
     "group/usage": {
         "orientation": "horizontal",
-        "modules": ["memory", "temperature"]
+        "modules": ["memory", "temperature", "custom/wlogout"]
     },
 
     "group/bat": {
@@ -21,6 +21,14 @@
     "group/net": {
         "orientation": "horizontal",
         "modules": ["network", "bluetooth"]
+    },
+
+
+    "custom/wlogout": {
+        "format": "  ",
+        "tooltip-format": "Powermenu",
+        "on-click": "wlogout -b 4",
+        "tooltip": false	
     },
 
     "hyprland/workspaces": {
