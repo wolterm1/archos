@@ -9,11 +9,17 @@ pacman -S yay
 
 #rofi themes:
 echo "installing rofi"
-yay -S rofi-wayland
 
+yay -S hyprland
+yay -S rofi-wayland
+yay -S swaync
+yay -S wlogout
+yay -S waybar
+yay -S alacritty
 yay -S nerd-fonts-noto-sans-regular-complete
 
-yay -S 
+
+yay -S firefox 
 
 echo "installing rofi themes"
 git clone --depth=1 https://github.com/adi1090x/rofi.git
