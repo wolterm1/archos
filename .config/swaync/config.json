@@ -51,41 +51,16 @@
     },
     "buttons-grid": {
       "actions": [
-        {
-          "label": "󰐥",
-          "command": "systemctl poweroff"
-        },
-        {
-          "label": "󰜉",
-          "command": "systemctl reboot"
-        },
-        {
-          "label": "󰌾",
-          "command": "hyprlock"
-        },
-        {
-          "label": "󰍃",
-          "command": "hyprctl logout"
-        },
-        {
-          "label": "󰕾",
+       {
+          "label": "",
           "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
           "type": "toggle"
         },
         {
-          "label": "󰍬",
+          "label": "mute mic",
           "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
           "type": "toggle"
-        },
-        {
-          "label": "󰖩",
-          "command": "nmtui"
-        },
-        {
-          "label": "󰂯",
-          "command": "blueman-manager"
         }
-        
       ]
     }
   }

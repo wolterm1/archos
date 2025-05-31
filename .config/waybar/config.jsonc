@@ -22,32 +22,29 @@
         "custom/notification",
         "cpu",
         "memory",
-        "battery",
         "network",
-        "pulseaudio"
+        "pulseaudio",
+        "battery"
     ],
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
+	    "active": "✧",
             "1": "1",
             "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
+            "3": "3"
         },
         "persistent-workspaces": {
             "1": [],
             "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
+            "3": []
         }
     },
 
     "custom/wlogout": {
-        "format": " ⣿ " ,
+        "format": "   " ,
         "on-click": "wlogout -b 4"
     },
 
@@ -56,11 +53,11 @@
     },
 
     "clock": {
-        "format": "{:%H:%M - %a, %d %b %Y}",
+        "format": "{:%H:%M - %a, %d %b %Y}"
     },
 
     "cpu": {
-        "format": "cpu {usage}%",
+        "format": " {usage}%",
         "interval": 2,
 
         "states": {
@@ -69,26 +66,27 @@
     },
 
     "memory": {
-        "format": "memory {percentage}%",
+        "format": " {percentage}%",
         "interval": 2,
-
         "states": {
             "critical": 80
         }
     },
 
     "battery": {
-        "format": "bat{capacity}%",
-        "interval": 5,
+        "format": " {capacity}%",
+	"format-charging": " {capacity}%",
+        "interval": 1,
         "states": {
             "warning": 20,
             "critical": 10
         },
-        "tooltip": false
+	"tooltip": false,
+        "tooltip-format": "Power: {power}W\nTime: {time}\nStatus: {status}"
     },
 
     "network": {
-        "format-wifi" : "wifi {bandwidthDownBits}",
+        "format-wifi" : " {bandwidthDownBits}",
         "format-ethernet": "eth {bandwidthDownBits}",
         "format-disconnected" : "no network",
         "interval": 5,
@@ -98,8 +96,9 @@
     "pulseaudio": {
         "scroll-step": 1,
         "max-volume": 100,
-        "format": "🕩 {volume}%",
-        "format-bluetooth": "🕩 {volume}%",
+        "format": " {volume}%",
+	"format-muted": "  ",
+        "format-bluetooth": "  {volume}%",
         "nospacing": 1,
         "on-click": "pavucontrol",
         "tooltip": false
