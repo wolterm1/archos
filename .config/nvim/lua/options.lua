@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -7,8 +5,8 @@ vim.opt.mouse = 'a'
 vim.opt.showmode = false
 
 vim.opt.expandtab = true -- Tabs als Leerzeichen
-vim.opt.tabstop = 4 -- Tab = 4 Leerzeichen
-vim.opt.shiftwidth = 4 -- Auto-Einrückung = 4
+vim.opt.tabstop = 2 -- Tab = 4 Leerzeichen
+vim.opt.shiftwidth = 2 -- Auto-Einrückung = 4
 vim.opt.smartindent = true -- Smarte Einrückung bei neuen Zeilen
 
 vim.schedule(function()
@@ -35,8 +33,6 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
     vim.hl.on_yank()
   end,
